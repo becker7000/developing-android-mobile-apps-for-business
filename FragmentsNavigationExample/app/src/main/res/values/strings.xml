@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FragmentsNavigationExample</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_fragment">First Fragment</string>
+    <string name="navega">Navega</string>
+    <string name="second_fragment">Second Fragment</string>
+    <string name="escribe_algo">Escribe algo:</string>
+    <string name="mueve_el_slider">Mueve el Slider</string>
+</resources>
