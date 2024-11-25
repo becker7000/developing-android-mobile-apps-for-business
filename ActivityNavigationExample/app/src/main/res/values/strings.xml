@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ActivityNavigationExample</string>
+    <string name="btn_text">Ir a Activity 2</string>
+    <string name="placeholder">Escribe algo:</string>
+    <string name="placeholder2">Un número:</string>
+
+</resources>
