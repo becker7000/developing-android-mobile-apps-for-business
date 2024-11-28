@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Icono de la tarea -->
+    <ImageView
+        android:id="@+id/taskIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/task" /> <!-- Cambia este ícono según lo que tengas en tu carpeta drawable -->
+
+    <!-- Contenedor vertical para el nombre y detalles -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <!-- Nombre de la tarea -->
+        <TextView
+            android:id="@+id/taskName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Name"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <!-- Descripción de la tarea -->
+        <TextView
+            android:id="@+id/taskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Details"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>
