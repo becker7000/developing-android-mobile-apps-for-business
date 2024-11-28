@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <!-- ConstraintLayout envuelto en un NestedScrollView para permitir el desplazamiento -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activity.MainActivity">
+
+        <!-- Barra de búsqueda -->
+        <!-- Fondo personalizado para la barra de búsqueda -->
+        <!-- Texto sugerido dentro de la barra -->
+        <!-- Alineación con el borde derecho del padre -->
+        <!-- Alineación con el borde izquierdo del padre -->
+        <!-- Alineación con el borde superior del padre -->
+        <android.widget.EditText
+            android:id="@+id/searchBar"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_bar_background"
+            android:hint="@string/buscar"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- RecyclerView para mostrar las categorías de productos -->
+        <!-- Alineación con el borde derecho del padre -->
+        <!-- Alineación con el borde izquierdo del padre -->
+        <!-- Alineación debajo de la barra de búsqueda -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoriesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchBar" />
+
+        <!-- RecyclerView para mostrar los productos destacados -->
+        <!-- Alineación con el borde derecho del padre -->
+        <!-- Alineación con el borde izquierdo del padre -->
+        <!-- Alineación debajo del RecyclerView de categorías -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/featuredProductsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoriesRecyclerView" />
+
+        <!-- Menú de navegación -->
+        <!-- Centra los elementos en el eje horizontal -->
+        <!-- Distribuye los elementos horizontalmente -->
+        <!-- Alineación debajo del RecyclerView de productos destacados -->
+        <android.widget.LinearLayout
+            android:id="@+id/navigationMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/featuredProductsRecyclerView">
+
+            <!-- Icono de inicio -->
+            <android.widget.ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:src="@drawable/inicio" />  <!-- Fuente del icono -->
+
+            <!-- Icono de carrito -->
+            <android.widget.ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:src="@drawable/carrito" />  <!-- Fuente del icono -->
+
+            <!-- Icono de usuario -->
+            <android.widget.ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:src="@drawable/user2" />  <!-- Fuente del icono -->
+
+        </android.widget.LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
